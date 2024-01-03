@@ -1,4 +1,4 @@
-package com.workintech.basicsecurity.entity.user;
+package com.workintech.basicsecurity.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
