@@ -18,6 +18,12 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
+    public Account findById(Long id) {
+        if (accountRepository.findById(id).isPresent()) return accountRepository.findById(id).get();
+        else throw new RuntimeException("Account with the following ID is not found: " + id);
+    }
+
+    @Override
     public Account save(Account account) {
         return accountRepository.save(account);
     }
