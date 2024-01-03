@@ -20,5 +20,6 @@ public class AuthenticationService {
         Optional<Member> foundMember = memberRepository.findByEmail(email);
         if (foundMember.isPresent()) throw new RuntimeException("User with the following email already exists: " + email);
 
+        String encodedPassword = passwordEncoder.encode(password);
     }
 }
